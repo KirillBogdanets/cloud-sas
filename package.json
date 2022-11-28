@@ -1,0 +1,25 @@
+{
+  "name": "cloud-sas",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KirillBogdanets/cloud-sas.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KirillBogdanets/cloud-sas/issues"
+  },
+  "homepage": "https://github.com/KirillBogdanets/cloud-sas#readme",
+  "dependencies": {
+    "node-telegram-bot-api": "^0.60.0",
+    "nodemon": "^2.0.20"
+  }
+}
