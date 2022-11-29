@@ -4,7 +4,16 @@
 #--------------------------------------------------------------
 
 version: 0.1
-os     : windows
+os: linux
 files:
-  - source     : \
-    destination: C:\
+  - source: /
+    destination: /var/www/html/WordPress
+hooks:
+  AfterInstall:
+    - location: scripts/install.sh
+      timeout: 300
+      runas: root
+  ApplicationStart:
+    - location: scripts/run.sh
+      timeout: 300
+      runas: root
