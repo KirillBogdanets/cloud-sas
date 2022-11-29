@@ -14,7 +14,7 @@ const startBot = async () => {
         { command: '/end', description: 'Saving converation' }
     ]);
 
-    bot.on('message', async msg => {
+    bot.on('message', async (msg) => {
         const text = msg.text;
         const chatId = msg.chat.id;
         const userName = `${msg.from.first_name} ${msg.from.last_name} | ${msg.from.username}`
@@ -30,14 +30,14 @@ const startBot = async () => {
                 await db.updateUsersConversation({
                     converstaionID: `${chatId}`,
                     messages,
-                    userName: userName
+                    userName
 
                 })
             } else {
                 await db.setUsersConversation({
                     converstaionID: `${chatId}`,
                     messages,
-                    userName: userName
+                    userName
 
                 });
             }
@@ -49,4 +49,4 @@ const startBot = async () => {
     })
 }
 
-startBot()
+startBot();

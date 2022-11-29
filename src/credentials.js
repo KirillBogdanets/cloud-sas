@@ -6,4 +6,4 @@ module.exports = {
     messagingSenderId: "811433492421",
     appId: "1:811433492421:web:1605c8edd12dcf705255ac",
     databaseURL: "https://cloud-sas-default-rtdb.europe-west1.firebasedatabase.app"
-};
+}
