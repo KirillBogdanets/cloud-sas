@@ -2,24 +2,57 @@
   "name": "cloud-sas",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/index.js",
+    "test": "jest",
+    "coverage": "jest --coverage",
+    "static:code:analysis": "eslint src/**/*.js",
     "dev": "nodemon index.js",
-    "start": "node index.js"
+    "start:bot": "node index.js",
+    "start:serivces": "concurrently \"npm run start:bot\" \"npm run start\"",
+    "docker:build": "docker build -t bot_debug -f ./Dockerfile .",
+    "start:docker": "npm run docker:build && docker run --rm -it -p 9999:8080 bot_debug"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/KirillBogdanets/cloud-sas.git"
+  "jest": {
+    "coverageThreshold": {
+      "global": {
+        "branches": 90,
+        "functions": 90,
+        "lines": 90,
+        "statements": 90
+      }
+    },
+    "reporters": [
+      "default",
+      [
+        "jest-html-reporters",
+        {
+          "publicPath": "./html-report",
+          "filename": "report.html"
+        }
+      ]
+    ]
   },
-  "author": "",
+  "engines": {
+    "node": "16.x.x"
+  },
+  "author": "Kiryl Bahdanets",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/KirillBogdanets/cloud-sas/issues"
-  },
-  "homepage": "https://github.com/KirillBogdanets/cloud-sas#readme",
   "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "firebase": "^8.3.2",
+    "firebase-admin": "^11.3.0",
     "node-telegram-bot-api": "^0.60.0",
     "nodemon": "^2.0.20"
+  },
+  "devDependencies": {
+    "chai": "^4.3.4",
+    "concurrently": "^7.6.0",
+    "eslint": "^7.24.0",
+    "jest": "^26.6.3",
+    "jest-html-reporters": "^2.1.4",
+    "sinon": "^10.0.0"
   }
 }
