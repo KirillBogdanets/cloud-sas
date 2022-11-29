@@ -11,6 +11,6 @@ files:
     overwrite: true
 hooks:
   ApplicationStart:
-    - location: ApplicationStartHook.sh
+    - location: scripts/ApplicationStartHook.sh
       timeout: 300
       runas: root
