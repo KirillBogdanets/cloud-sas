@@ -10,6 +10,7 @@ files:
     destination: /usr/share/nginx/html
     overwrite: true
 hooks:
-  AfterInstall:
-    - location: scripts/AfterInstallHook.sh
+  ApplicationStart:
+    - location: ApplicationStartHook.sh
       timeout: 300
+      runas: root
