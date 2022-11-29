@@ -9,7 +9,7 @@ const db = new FirebaseDB(firebaseConfig);
 app.use(bodyParser.json())
 
 /**
- * return free user
+ * return conversation
  */
 app.get('/coversations', async (req, res) => {
     const messages = await db.getAllConversationsMessages();
@@ -21,7 +21,7 @@ app.get('/coversations', async (req, res) => {
 });
 
 /**
- * return certain user
+ * return certain conversation
  */
 app.get('/coversation/:id', async (req, res) => {
     const messages = await db.getMessagesByConversationId(req.params.id);
