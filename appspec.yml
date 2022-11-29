@@ -10,9 +10,6 @@ files:
     destination: /usr/share/nginx/html
     overwrite: true
 hooks:
-  BeforeInstall:
-    - location: scripts/BeforeInstallHook.sh
-      timeout: 300
   AfterInstall:
     - location: scripts/AfterInstallHook.sh
       timeout: 300
