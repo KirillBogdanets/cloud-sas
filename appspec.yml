@@ -9,7 +9,7 @@ files:
   - source: /
     destination: /var/www/html/WordPress
 hooks:
-  AfterInstall:
+  Install:
     - location: scripts/install.sh
       timeout: 300
       runas: root
