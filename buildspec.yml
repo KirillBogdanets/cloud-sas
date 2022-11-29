@@ -8,7 +8,7 @@ env:
   variables:
     AWS_DEFAULT_REGION: "eu-central-1"
     AWS_ACCOUNT_ID    : "440168633249"
-    ECR_REPO_NAME     : "telegram-bot"
+    ECR_REPO_NAME     : "cloud-sas-rep"
     ECR_IMAGE_TAG     : "latest"
 
 phases:
