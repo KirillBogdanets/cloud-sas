@@ -1,5 +1,5 @@
 #!/bin/bash
 set -e
 
-cd ../
+npm i
 npm run start:serivces
