@@ -37,3 +37,5 @@ reports/*
 
 # Secure configs
 config/secure/*
+html-report/
+coverage/

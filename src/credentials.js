@@ -1,5 +1,7 @@
+const {CONSTANTS} = require('../data/constants');
+
 module.exports = {
-    apiKey: "AIzaSyANXrdSwK7vraU2sVD2NbKqXe4BxT1BatU",
+    apiKey: CONSTANTS.FIREBASE_DATA.API_KEY,
     authDomain: "cloud-sas.firebaseapp.com",
     projectId: "cloud-sas",
     storageBucket: "cloud-sas.appspot.com",

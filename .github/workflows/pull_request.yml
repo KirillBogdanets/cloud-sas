@@ -26,3 +26,5 @@ jobs:
         run: npm run test
       - name: unit tests coverage
         run: npm run coverage
+      - name: report to s3 sending
+        run: npm run publish:report:to:s3
