@@ -24,7 +24,7 @@ const startBot = async () => {
         }
         if (text === '/end') {
             await bot.sendSticker(chatId, 'https://sticker-collection.com/stickers/plain/LianaWidowPhon_by_fStikBot/512/5f1aac67-0db8-49ff-9fea-d6b46de5e15dfile_330543.webp')
-            if (messages.length === 0) messages.push('No Messages');
+            if (messages.length === 0) messages.push('No Messagess');
             const usersConversation = await db.getUsersConversation(chatId);
             if (usersConversation) {
                 await db.updateUsersConversation({
