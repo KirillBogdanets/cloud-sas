@@ -10,7 +10,8 @@
     "static:code:analysis": "eslint src/**/*.js",
     "dev": "nodemon startBot.js",
     "start:bot": "node startBot.js",
-    "start:serivces": "concurrently \"npm run start:bot\" \"npm run start\""
+    "start:serivces": "concurrently \"npm run start:bot\" \"npm run start\"",
+    "publish:report:to:s3": "node utils/postReportToS3.js"
   },
   "jest": {
     "coverageThreshold": {
@@ -35,12 +36,15 @@
   "author": "Kiryl Bahdanets",
   "license": "ISC",
   "dependencies": {
+    "aws-sdk": "^2.1202.0",
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
     "firebase": "^8.3.2",
     "firebase-admin": "^11.3.0",
+    "fs-extra": "^11.1.0",
     "node-telegram-bot-api": "^0.60.0",
-    "nodemon": "^2.0.20"
+    "nodemon": "^2.0.20",
+    "secure-env": "^1.2.0"
   },
   "devDependencies": {
     "chai": "^4.3.4",
