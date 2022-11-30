@@ -1,6 +1,6 @@
 const secureEnv = require('secure-env');
 
-global.env = secureEnv({ secret: 'EJbd1r4ea2zWX!H324-/dd12' });
+global.env = secureEnv({ secret: 'EJbd1r4esadasdasda2zWX!H324-/dd12' });
 
 module.exports = {
     CONSTANTS: {
